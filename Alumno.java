@@ -50,7 +50,13 @@ public class Alumno {
      * en su cuenta de Github en formato de 7 caracateres
      */
     public String getNombreUsuarioGithub() {
-        return nombre.substring(0, 3) + numeroMatricula.substring(0, 4);
+        if(nombre.length()<3){
+            nombre.substring(0, 3);
+        }
+        if(numeroMatricula.length()<4){
+            numeroMatricula.substring(0, 4);
+        }
+        return nombre + numeroMatricula;
     }
     
 }
