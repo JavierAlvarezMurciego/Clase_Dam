@@ -14,6 +14,14 @@ public class Alumno {
         nombre = nombreCompleto;
         numeroMatricula = numeroMatriculaAlumno;
         edad = edadAlumno;
+        nombre.length();
+        numeroMatricula.length();
+        if(nombre.length()<3){
+            System.out.println("Error con la longitud del nombre");
+        }
+        if(numeroMatricula.length()<4){
+            System.out.println("Error con la longitud del numero de matricula");
+        }
     }
 
     /**
@@ -44,4 +52,5 @@ public class Alumno {
     public String getNombreUsuarioGithub() {
         return nombre.substring(0, 3) + numeroMatricula.substring(0, 4);
     }
+    
 }
